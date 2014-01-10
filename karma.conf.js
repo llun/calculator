@@ -11,9 +11,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'assets/js/libs/*',
-      'assets/js/angular/*',
-      'assets/js/core/*',
+      'public/javascripts/*',
       'specs/client/dependencies/*',
       'specs/client/*.js'
     ],
