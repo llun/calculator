@@ -10,6 +10,25 @@
     "jade": "0.x"
   },
   "devDependencies": {
-    "chai": "1.8.x"
+    "chai": "1.8.x",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9",
+    "grunt-karma": "~0.6.2",
+    "grunt-simple-mocha": "~0.4.0",
+    "karma": "~0.10",
+    "karma-mocha": "~0.1",
+    "load-grunt-tasks": "~0.2.0",
+    "mocha": "1.x",
+    "sinon": "1.7.x",
+    "sinon-chai": "2.4.x",
+    "time-grunt": "~0.2.5"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.x"
+  },
+  "scripts": {
+    "start": "node app",
+    "test": "./node_modules/grunt-cli/bin/grunt --no-color"
   }
 }
