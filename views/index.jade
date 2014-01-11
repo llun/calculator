@@ -6,12 +6,12 @@ html
 
   body
     .container
-      form
+      form(ng-submit='calculate(data)')
         .row
           .small-12.medium-8.medium-centered.large-6.large-centered.columns
             .row
               .small-12.columns
-                input(type='text',placeholder='0')
+                input(type='text',placeholder='0',ng-model='data')
             .row
               .small-12.columns.history
 

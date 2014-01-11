@@ -18,6 +18,8 @@ describe('Main', function () {
     it ('should evaluate the result and send to the backend', function () {
       scope.calculate('21.03+53.12');
       expect(scope.result).to.equal(21.03 + 53.12);
+      expect(scope.history).to.have.length(1);
+      expect(scope.history[0]).to.equal('21.03 + 53.12 = ' + (21.03+53.12));
     });
 
     it ('should not evaluate input that has `=`', function () {
@@ -33,6 +35,8 @@ describe('Main', function () {
     it ('should evaluate all values in input', function () {
       scope.calculate('3+5/2');
       expect(scope.result).to.equal(3+5/2);
+      expect(scope.history).to.have.length(1);
+      expect(scope.history[0]).to.equal('3 + 5 / 2 = ' + (3 + 5 / 2));
     });
 
     it ('should return empty when calculate only one value', function () {
