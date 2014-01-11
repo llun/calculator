@@ -12,7 +12,6 @@ angular.module('Calculator', [])
 
           var fragments = _.map(value.split(/(\+|\-|\*|\/)/), function (fragment) { return fragment.trim(); });
           $scope.history.push(fragments.join(' ') + ' = ' + $scope.result);
-          console.log ($scope.history);
 
         }
         else {
