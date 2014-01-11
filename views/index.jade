@@ -1,10 +1,13 @@
 doctype 5
-html
+html(ng-app='Calculator')
   head
     title= title
     link(rel='stylesheet',href='/stylesheets/foundation.min.css')
+    script(src='/javascripts/angular.js')
+    script(src='/javascripts/lodash.js')
+    script(src='/javascripts/calculator.js')
 
-  body
+  body(ng-controller='Main')
     .container
       form(ng-submit='calculate(data)')
         .row
@@ -14,4 +17,7 @@ html
                 input(type='text',placeholder='0',ng-model='data')
             .row
               .small-12.columns.history
+                ul
+                  li(ng-repeat='item in history')
+                    {{item}}
 
