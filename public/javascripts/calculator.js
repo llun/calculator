@@ -5,7 +5,8 @@ angular.module('Calculator', [])
     function ($scope) {
 
       $scope.calculate = function (value) {
-        if (/^\d+\.\d+(\+|\-|\*|\/)\d+\.\d+$/.test(value)) {
+        var match = /^\d+(\.\d+)*((\+|\-|\*|\/)\d+(\.\d+)*)+$/.test(value);
+        if (match) {
           $scope.result = eval(value);
         }
         else {

@@ -30,6 +30,16 @@ describe('Main', function () {
       expect(scope.result).to.equal('');
     });
 
+    it ('should evaluate all values in input', function () {
+      scope.calculate('3+5/2');
+      expect(scope.result).to.equal(3+5/2);
+    });
+
+    it ('should return empty when calculate only one value', function () {
+      scope.calculate('31.2');
+      expect(scope.result).to.equal('');
+    });
+
   });
 
 });
