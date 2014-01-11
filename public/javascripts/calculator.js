@@ -18,6 +18,7 @@ angular.module('Calculator', [])
         else {
           $scope.result = '';
         }
+        $scope.data = '';
       }
 
     }]);

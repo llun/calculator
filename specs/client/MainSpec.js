@@ -15,6 +15,18 @@ describe('Main', function () {
 
   describe('#calculate', function () {
 
+    it ('should clear the result after calculate', function () {
+      scope.data = '21+12';
+      scope.calculate(scope.data);
+      expect(scope.data).to.equal('');
+    });
+
+    it ('should clear the result even calculation is fail.', function () {
+      scope.data = '21';
+      scope.calculate(scope.data);
+      expect(scope.data).to.equal('');
+    });
+
     it ('should evaluate the result and send to the backend', function () {
       scope.calculate('21.03+53.12');
       expect(scope.result).to.equal(21.03 + 53.12);
