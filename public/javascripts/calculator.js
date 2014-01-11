@@ -6,7 +6,7 @@ angular.module('Calculator', [])
 
       $scope.history = [];
       $scope.calculate = function (value) {
-        var match = /^\d+(\.\d+)*((\+|\-|\*|\/)\d+(\.\d+)*)+$/.test(value);
+        var match = /^\d+(\.\d+)*\s*((\+|\-|\*|\/)\s*\d+(\.\d+)*)+$/.test(value);
         if (match) {
           $scope.result = eval(value);
 

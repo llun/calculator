@@ -56,6 +56,11 @@ describe('Main', function () {
       expect(scope.result).to.equal('');
     });
 
+    it ('should allow space in input', function () {
+      scope.calculate('2 + 5');
+      expect(scope.result).to.equal(7);
+    });
+
   });
 
 });
